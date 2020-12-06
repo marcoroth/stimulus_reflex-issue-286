@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   set_current_tenant_through_filter
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  # before_action :set_tenant
 
   # GET /users
   # GET /users.json

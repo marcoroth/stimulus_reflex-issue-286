@@ -1,7 +1,6 @@
 class ProjectsController < ApplicationController
   set_current_tenant_through_filter
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  # before_action :set_tenant
 
   # GET /projects
   # GET /projects.json
