@@ -1,9 +1,8 @@
 module AccountSlug
   PATTERN = /(\d{1,})/
-  FORMAT = '%07d'
 
   def self.decode(slug) slug.to_i end
-  def self.encode(id) FORMAT % id end
+  def self.encode(id) id end
 
   # We're using account id prefixes in the URL path. Rather than namespace
   # all our routes, we're "mounting" the Rails app at this URL prefix.
@@ -15,7 +14,7 @@ module AccountSlug
   # so the main app is none the wiser. We look up the current account using
   # env['app.account.id'] instead of request.subdomains.first
   class Extractor
-    PATH_INFO_MATCH = /\A(\/#{AccountSlug::PATTERN})/
+    PATH_INFO_MATCH = /(\/#{AccountSlug::PATTERN})/
 
     def initialize(app)
       @app = app

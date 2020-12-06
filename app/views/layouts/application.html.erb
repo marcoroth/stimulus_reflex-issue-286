@@ -13,7 +13,7 @@
   <body>
     <% if current_tenant %>
       <div>
-        Tenant: <%= current_tenant&.id %> - <%= link_to "Change Tenant", home_index_path %>
+        Tenant: <%= current_tenant.id %> - <%= link_to "Change Tenant", "/" %>
       </div><br/>
 
       Navigation:
@@ -21,8 +21,16 @@
         <li><%= link_to "Project", projects_path %></li>
         <li><%= link_to "Users", users_path %></li>
       </ul><br/>
-    <% end %>
-
     <%= yield %>
+
+    <% else %>
+      <h2>Select Teneat</h2>
+
+      <% Account.all.each do |account| %>
+        <ul>
+          <li><%= link_to "Select Tenant #{account.id}", "/#{account.id}" %>
+        </ul>
+      <% end %>
+    <% end %>
   </body>
 </html>

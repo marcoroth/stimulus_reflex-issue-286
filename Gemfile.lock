@@ -7,8 +7,9 @@ GIT
       request_store (>= 1.0.5)
 
 GIT
-  remote: https://github.com/hopsoft/stimulus_reflex.git
-  revision: 63566ff5bb1c78b4aef3da57584a3594340be501
+  remote: https://github.com/marcoroth/stimulus_reflex.git
+  revision: 1d674a1acf96ac48333917b614a8af014584dae4
+  branch: support-for-middlewares
   specs:
     stimulus_reflex (3.4.0.pre8)
       cable_ready (>= 4.4)

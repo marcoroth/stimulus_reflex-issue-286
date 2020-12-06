@@ -10,7 +10,7 @@ yarn install
 
 rails dev:cache
 
-rails db:drop db:create db:migrate db:seed
+rails db:create db:migrate db:seed
 ```
 
 ## Start

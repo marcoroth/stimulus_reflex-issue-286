@@ -1,4 +1,5 @@
 require_relative "boot"
+require_relative "../app/middleware/account_slug"
 
 require "rails/all"
 
@@ -10,6 +11,8 @@ module StimulusReflexActsAsTenant
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
+
+    config.middleware.use ::AccountSlug::Extractor
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
