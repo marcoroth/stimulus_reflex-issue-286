@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/marcoroth/stimulus_reflex.git
-  revision: 0e1b66a871b49a601d616b707430c9fbadcfa564
+  revision: efb8fdcdd7c31856e283e1c429aa56ae9f09405f
   branch: support-for-middlewares
   specs:
     stimulus_reflex (3.4.0.pre8)
