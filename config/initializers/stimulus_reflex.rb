@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 StimulusReflex.configure do |config|
-  config.enable_middleware_processing = true
+  config.middleware.use ::AccountSlug::Extractor
 end
